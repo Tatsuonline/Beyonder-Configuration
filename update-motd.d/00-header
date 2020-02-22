@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+#    00-header - create the header of the MOTD
+#    Copyright (C) 2009-2010 Canonical Ltd.
+#
+#    Authors: Dustin Kirkland <kirkland@canonical.com>
+#
+#    This program is free software; you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation; either version 2 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License along
+#    with this program; if not, write to the Free Software Foundation, Inc.,
+#    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+[ -r /etc/lsb-release ] && . /etc/lsb-release
+
+if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
+	# Fall back to using the very slow lsb_release utility
+	DISTRIB_DESCRIPTION=$(lsb_release -s -d)
+fi
+
+#printf "Welcome to %s (%s %s %s)\n" "$DISTRIB_DESCRIPTION" "$(uname -o)" "$(uname -r)" "$(uname -m)"
+
+array[0]="\"I pretend nothing! I am SUPREME!! In my native realm I WAS the universe!\" - Beyonder"
+array[1]="\"Mortal, I know not who you are, but you must be the greatest fool on all this world of fools!\" - Beyonder"
+array[2]="\"I am from beyond! Compile your code and all you desire shall be yours! Nothing you dream of is impossible for me to accomplish!\" - Beyonder"
+array[3]="\"I am from beyond. I come from beyond to your small planet to comprehend your species' strange needs and desires.\" - Beyonder"
+array[4]="\"I am beyond Jabil. I am beyond that which you comprehend!\" - Beyonder"
+array[5]="\"Am I your server? ...No. I am the very network itself!\" - Beyonder"
+rand=$[$RANDOM % ${#array[@]}]
+
+printf "\n\033[92m"
+echo ${array[$rand]}
+printf "\033[0m\n"
