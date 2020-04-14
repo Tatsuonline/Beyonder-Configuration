@@ -1,0 +1,12 @@
+#+TITLE: Beyonder-Configuration 
+#+AUTHOR: Alexander Phillips
+#+EMAIL: mail@alexanderphillips.net
+-----
+
+This is just some of the stuff I added to the /etc/update-motd.d files to give our server the ability to strike fear into the hearts of those who dared connect to it.
+
+I named it Beyonder after the famous [[https://en.wikipedia.org/wiki/Beyonder][comic book character]] to emphasize its power. All these little scripts do is provide a random quote every time someone connects to it and it also displays some information about the server.
+
+#+CAPTION: A taste of Beyonder's power. 
+#+NAME: Beyonder
+[[./images/beyonder.jpg]]

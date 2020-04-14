@@ -11,7 +11,8 @@ echo "     %                                                                    
 
 cat << EOF
               Name: Beyonder
-              Created By: Alexander Phillips (alexander@keemail.me) and Samodya Abeysiriwardane (hello@sransara.com)
+              Created By: Alexander Phillips (`echo "\033[93mmail@alexanderphillips.net\033[0m"`)
+              And: Samodya Abeysiriwardane (`echo "\033[93mhello@sransara.com\033[0m"`)
               Creation Date: May 26, 2018
               Uptime: $UPTIME_DAYS days, $UPTIME_HOURS hours, $UPTIME_MINUTES minutes
 
