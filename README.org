@@ -9,4 +9,4 @@ All these little scripts do is provide a random quote every time someone connect
 
 #+CAPTION: A taste of the server's power. 
 #+NAME: Server Message
-[[./images/beyonder.jpg]]
+[[./images/server.jpg]]
